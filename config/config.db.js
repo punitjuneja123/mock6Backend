@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-
-let connection = mongoose.connect(
-  "mongodb+srv://punit:punit@cluster0.hpn8i.mongodb.net/airBookingDB?retryWrites=true&w=majority"
-);
+require("dotenv").config();
+let connection = mongoose.connect(process.env.db);
 
 module.exports = { connection };
